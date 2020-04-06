@@ -12,3 +12,19 @@ For inspiration
 - https://github.com/sayedihashimi/sayed-tools - More powershell-focused build scripts, check out machine-setup.ps1 and run-machine-setup.ps1
 - https://edi.wang/post/2018/12/21/automate-windows-10-developer-machine-setup - Powershell only, but includes a neat trick to self-elevate the script
 
+## Simple instructions for getting multiple git accounts on one Windows computer
+
+These instructions assume you have a "normal" git account for everyday use, but need to use a second (for contributing to your local github from your work machine or vice versa.) This will assume all of your code is in a "HomeCode" directory.
+1. Go to your gitconfig. By default, it should be in `%USERPROFILE%\.gitconfig`
+1. Add the following:
+    ```
+    [includeIf "gitdir:**/HomeCode/**"]
+      path = .gitconfig-homecode
+    ```
+1. Create the new file `.gitconfig-homecode` with the following contents:
+    ```
+    [user]
+      name = Your Name
+      email = youremail@domain.tld
+    ```
+1. Proceed with clone/checkout/commit in the HomeCode directory. At some point you should be asked for your password, which once provided should apply to any future changes made to that directory.
