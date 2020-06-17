@@ -4,4 +4,4 @@
 
 # Once the above is done, run this command
 
-Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/Dessyreqt/setup/master/standard.txt -DisableReboots
+Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/Dessyreqt/setup/master/standard.ps1 -DisableReboots

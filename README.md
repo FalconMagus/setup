@@ -1,6 +1,10 @@
 # setup
 A repository to keep setup scripts and settings
 
+## Links to run the scripts
+
+[Standard Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/standard.ps1) - for most home machines in my network
+
 ## some links
 For inspiration
 
