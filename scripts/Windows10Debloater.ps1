@@ -770,8 +770,6 @@ Stop-EdgePDF
 Write-Host "Edge will no longer take over as the default PDF viewer."
 UninstallOneDrive
 Write-Host "OneDrive is now removed from the computer."
-UnpinStart
-Write-Host "Start Apps unpined."
 Write-Host "Unloading the HKCR drive..."
 Remove-PSDrive HKCR 
 Start-Sleep 1
