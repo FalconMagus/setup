@@ -28,9 +28,11 @@ executeScript "CommonApplications.ps1"
 executeScript "ServerApplications.ps1"
 
 # checkout setup scripts
+RefreshEnv
 mkdir C:\git\Dessyreqt
 Set-Location C:\git\Dessyreqt
 git clone https://github.com/Dessyreqt/setup.git
+Set-Location C:\git\Dessyreqt\setup\scripts
 Start-Process powershell -Verb runAs
 
 Enable-UAC
