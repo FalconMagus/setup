@@ -11,12 +11,12 @@ $helperUri = $helperUri.TrimStart("'", " ")
 $helperUri = $helperUri.TrimEnd("'", " ")
 $helperUri = $helperUri.Substring(0, $helperUri.LastIndexOf("/"))
 $helperUri += "/scripts"
-write-host "helper script base URI is $helperUri"
+Write-Host "helper script base URI is $helperUri"
 
 function executeScript {
     Param ([string]$script)
-    write-host "executing $helperUri/$script ..."
-	iex ((new-object net.webclient).DownloadString("$helperUri/$script"))
+    Write-Host "executing $helperUri/$script ..."
+	Invoke-Expression ((new-object net.webclient).DownloadString("$helperUri/$script"))
 }
 
 #--- Setting up Windows ---
