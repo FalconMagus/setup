@@ -721,7 +721,7 @@ Write-Host "Creating PSDrive 'HKCR' (HKEY_CLASSES_ROOT). This will be used for t
 New-PSDrive  HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT
 Start-Sleep 1
 Write-Host "Uninstalling bloatware, please wait."
-DebloatAll
+DebloatBlacklist
 Write-Host "Bloatware removed."
 Start-Sleep 1
 Write-Host "Removing specific registry keys."
