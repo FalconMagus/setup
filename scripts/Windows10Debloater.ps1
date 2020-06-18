@@ -716,6 +716,21 @@ Function Restore3dObjects {
     }
 }
 
+# Stop and disable Connected User Experiences and Telemetry (previously named Diagnostics Tracking Service)
+Function DisableDiagTrack {
+	Write-Output "Stopping and disabling Connected User Experiences and Telemetry Service..."
+	Stop-Service "DiagTrack" -WarningAction SilentlyContinue
+	Set-Service "DiagTrack" -StartupType Disabled
+}
+
+# Stop and disable Device Management Wireless Application Protocol (WAP) Push Service
+# Note: This service is needed for Microsoft Intune interoperability
+Function DisableWAPPush {
+	Write-Output "Stopping and disabling Device Management WAP Push Service..."
+	Stop-Service "dmwappushservice" -WarningAction SilentlyContinue
+	Set-Service "dmwappushservice" -StartupType Disabled
+}
+
 #Creates a "drive" to access the HKCR (HKEY_CLASSES_ROOT)
 Write-Host "Creating PSDrive 'HKCR' (HKEY_CLASSES_ROOT). This will be used for the duration of the script as it is necessary for the removal and modification of specific registry keys."
 New-PSDrive  HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT
