@@ -28,8 +28,8 @@ executeScript "CommonApplications.ps1"
 executeScript "ServerApplications.ps1"
 
 # checkout setup scripts
-mkdir C:\git
-Set-Location C:\git
+mkdir C:\git\Dessyreqt
+Set-Location C:\git\Dessyreqt
 git clone https://github.com/Dessyreqt/setup.git
 Start-Process powershell -Verb runAs
 
