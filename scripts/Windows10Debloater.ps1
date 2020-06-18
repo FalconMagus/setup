@@ -722,27 +722,6 @@ Function Restore3dObjects {
     }
 }
 
-#Interactive prompt Debloat/Revert options
-$Button = [Windows.MessageBoxButton]::YesNoCancel
-$ErrorIco = [Windows.MessageBoxImage]::Error
-$Warn = [Windows.MessageBoxImage]::Warning
-$Ask = 'The following will allow you to either Debloat Windows 10 or to revert changes made after Debloating Windows 10.
-
-        Select "Yes" to Debloat Windows 10
-
-        Select "No" to Revert changes made by this script
-        
-        Select "Cancel" to stop the script.'
-
-$EverythingorSpecific = "Would you like to remove everything that was preinstalled on your Windows Machine? Select Yes to remove everything, or select No to remove apps via a blacklist."
-$EdgePdf = "Do you want to stop edge from taking over as the default PDF viewer?"
-$EdgePdf2 = "Do you want to revert changes that disabled Edge as the default PDF viewer?"
-$Reboot = "For some of the changes to properly take effect it is recommended to reboot your machine. Would you like to restart?"
-$OneDriveDelete = "Do you want to uninstall One Drive?"
-$Unpin = "Do you want to unpin all items from the Start menu?"
-$InstallNET = "Do you want to install .NET 3.5?"
-$Prompt1 = [Windows.MessageBox]::Show($Ask, "Debloat or Revert", $Button, $ErrorIco) 
-
 #Creates a "drive" to access the HKCR (HKEY_CLASSES_ROOT)
 Write-Host "Creating PSDrive 'HKCR' (HKEY_CLASSES_ROOT). This will be used for the duration of the script as it is necessary for the removal and modification of specific registry keys."
 New-PSDrive  HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT
