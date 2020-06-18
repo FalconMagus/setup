@@ -1,7 +1,0 @@
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-
-cinst keepass
-cinst dropbox
-cinst steam
-cinst notepadplusplus
-cinst slack

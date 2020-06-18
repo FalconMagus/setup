@@ -1,6 +1,4 @@
-# Description: Boxstarter Script
-# Author: Microsoft
-# Common settings for web dev
+# Setup for David's non-dev machines
 
 Disable-UAC
 
@@ -22,21 +20,13 @@ function executeScript {
 }
 
 #--- Setting up Windows ---
+executeScript "Windows10Debloater.ps1"
 executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfiguration.ps1";
-executeScript "CommonDevTools.ps1";
-executeScript "RemoveDefaultApps.ps1";
-executeScript "HyperV.ps1";
-executeScript "Docker.ps1";
-executeScript "WSL.ps1";
-executeScript "Browsers.ps1";
-
-#--- Tools ---
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension msjsdiag.debugger-for-edge
-
-#--- Microsoft WebDriver ---
-choco install -y microsoftwebdriver
+executeScript "CommonApplications.ps1"
+executeScript "ClientApplications.ps1"
+executeScript "DavidApplications.ps1"
+executeScript "DevelopmentApplications.ps1"
 
 Enable-UAC
 Enable-MicrosoftUpdate
