@@ -775,7 +775,3 @@ Write-Host "Start Apps unpined."
 Write-Host "Unloading the HKCR drive..."
 Remove-PSDrive HKCR 
 Start-Sleep 1
-Write-Host "Script has finished. Exiting."
-Stop-Transcript
-Start-Sleep 2
-Exit
