@@ -317,7 +317,7 @@ Function Protect-Privacy {
     Write-Output "Removing CloudStore from registry if it exists"
     $CloudStore = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\CloudStore'
     If (Test-Path $CloudStore) {
-        Stop-Process Explorer.exe -Force
+        Get-Process explorer | Stop-Process -Force
         Remove-Item $CloudStore -Recurse -Force
         Start-Process Explorer.exe -Wait
     }
