@@ -6,7 +6,7 @@ A repository to keep setup scripts and settings
 [Basic Client Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/BasicClient.ps1) - for a basic client machine
 [Basic Server Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/BasicServer.ps1) - for any server 
 [David's Dev Machine Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/David.ps1) - for David's dev machines
-[David's Non-Dev Machine Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/BasicServer.ps1) - for David's non-dev machines
+[David's Non-Dev Machine Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/DavidNoDev.ps1) - for David's non-dev machines
 
 ## some links
 For inspiration
