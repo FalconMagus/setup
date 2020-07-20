@@ -1,4 +1,4 @@
-# Setup for a basic client machines
+# Setup for basic client machines
 
 Disable-UAC
 
